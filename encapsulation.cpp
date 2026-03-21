@@ -78,6 +78,10 @@ class sportcar{
     void setcurrentspeed(int speed){
         this->currentspeed=speed;
     }
+//when we are setting or getting the value it can not be set or get by directly can be set by using getter and setter function 
+//why we are using because we can put many condition such you passed any string to check that the given string is valid or not 
+// or we can check that the given model or input actually exist or not 
+
 
 };
 int main(){
