@@ -64,14 +64,14 @@ class sportcar{
         cout<<"speed decreased to "<<currentspeed<<endl;
 
     }
-    // void stopengine()
-    // {
-    //     engineon=false;
-    //     currentspeed=0;
-    //     currentgear=0;
-    //     cout<<"engine stopped"<<endl;
+    void stopengine()
+    {
+        engineon=false;
+        currentspeed=0;
+        currentgear=0;
+        cout<<"engine stopped"<<endl;
 
-    // }
+    }
     int getcurrentspeed(){
         return this->currentspeed;
     }
