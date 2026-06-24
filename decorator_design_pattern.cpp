@@ -84,7 +84,18 @@ class RemoteComtroller{
     void pressedbutton(int idx){
         if(idx>=0 && idx<numsButton && buttons[idx]!=nullptr)
         {
+            if(buttonPressed[idx]==false){
+                buttons[idx]->execute();
+            }
+            else{
+                buttons[idx]->undo();
 
+            }
+          buttonPressed[idx]=!buttonPressed[i];
         }
+        else{
+            cout<<"there is no command at this index"<<endl;
+        }
+
     }
     }
