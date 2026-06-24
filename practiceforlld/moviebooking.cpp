@@ -194,6 +194,46 @@ int getfreeseatcount(int showid)
     }
     Show*s=mapping_show[showid];
     return s->freesheet;
+vector<int>listofcinamas(int movieid,int cityid)
+{
+if(moving_to_show.find(movieid)==moving_to_show.end()){
+    return {};
+}
+if(cityToCinemas.find(cityid)==cityToCinemas.end()){
+    return {};
+}
+vector<int>result;
+for(int cinid:cityToCinemas[cityid]){
+    for(int showid:cinema_to_show[cinid])
+    {
+        if(moving_to_show[showid]->movieid==movieid){
+            result.push_back(cinid);
+            break;
+        }
+
+    }
+}
+return result;
 }
 
+vector<int>listofshow(int movieid,int cinemaid)
+{
+    if(cinema_to_show.find(cinemaid)==cinema_to_show.end()){
+        return {};
+    }
+    if(moving_to_show.find(movieid)==moving_to_show.end()){
+        return {};
+    }
+    vector<int>result;
+    for(int showid:cinema_to_show[cinemaid])
+    {
+        if(moving_to_show[showid]->movieid==movieid){
+            result.push_back(showid);
+        }
+    }
+    return result;
+    
+
+}
+}
 }
