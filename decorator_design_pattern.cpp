@@ -47,5 +47,44 @@ class FanCommand:public command{
     private:
     Fan*fan;
     public:
-    
+    FanCommand(Fan*f){
+    fan=f;
+    }
+    void execute(){
+        fan->on();
+    }
+    void undo(){
+        fan->off();
+    }
+
 }
+class RemoteComtroller{
+    private:
+    static const int numButtons=4;
+    command*buttons[numsButtons];
+    bool buttonPressed[numsButtons];
+    public:
+    RemoteComtroller(){
+        for(int i=0;i<numsButtons;i++){
+        if(buttons[i]==nullptr){
+            buttonPressed[i]=false;
+        }
+        }
+    }
+    void setcommand(int idx,command*cmd){
+        if(idx>=0 && idx<numsButton){
+            if(buttons[idx]!=nullptr){
+                delete buttons[idx];
+            }
+            buttons[idx]=cmd;
+            buttonpdressed[idx]=false;  
+        }
+
+    }
+    void pressedbutton(int idx){
+        if(idx>=0 && idx<numsButton && buttons[idx]!=nullptr)
+        {
+
+        }
+    }
+    }
