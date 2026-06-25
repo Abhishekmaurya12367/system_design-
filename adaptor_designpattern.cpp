@@ -18,3 +18,7 @@ class Xmldataprovider{
                "</user>"
                 }
 }
+class XmlDataProviderAdaptor: public IReports
+{
+
+}
