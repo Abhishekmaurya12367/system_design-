@@ -29,6 +29,7 @@ XmlDataProviderAdaptor(Xmldataprovider*provider){
 }
 
 string getJsonData(const string data)override{
+    // get xml data from the adaptor
     string xml=xmlprovider-> XmlData(data);
 
 }
