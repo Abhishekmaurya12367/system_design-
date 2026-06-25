@@ -41,10 +41,12 @@ size_t Start_id=xml.find("<id>")+4;
 size_t End_id=xml.find("</id>")
 string id=xml.substr(Start_id,End_id-Start_id);
 return "{"\Name":\""+Name+\"",\"id\":"+ id +"}";
-
-
-    
 }
-
-
+}
+class  Client{
+    public:
+    void getreport(IReports*report,string rawdata)
+    {
+     cout<<"json data:"<<report->getJsonData(rawdata)<<endl;
+    }
 }
