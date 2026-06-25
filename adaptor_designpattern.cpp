@@ -24,6 +24,14 @@ private:
 Xmldataprovider*xmlprovider;
 
 public:
+XmlDataProviderAdaptor(Xmldataprovider*provider){
+    this->xmlprovider=provider;
+}
+
+string getJsonData(const string data)override{
+    string xml=xmlprovider-> XmlData(data);
+
+}
 
 
 }
