@@ -20,5 +20,10 @@ class Xmldataprovider{
 }
 class XmlDataProviderAdaptor: public IReports
 {
+private:
+Xmldataprovider*xmlprovider;
+
+public:
+
 
 }
