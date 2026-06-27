@@ -47,6 +47,6 @@ class  Client{
     public:
     void getreport(IReports*report,string rawdata)
     {
-     cout<<"json data:"<<report->getJsonData(rawdata)<<endl;
+     cout<<"json data:"<<report->getJsonData(rawdata)<<endl; good
     }
 }
