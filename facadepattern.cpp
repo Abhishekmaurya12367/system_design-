@@ -1,52 +1,66 @@
 #include<bits/stdc++.h>
 using namespace std;
-class powersupply{
+class Powersupply{
     public:
     void providepowe(){
         cout<<"power supply:providing power,,"<<endl;
     }
 }
-class coolingsyste{
+class Coolingsyste{
     public:
     void startfan(){
         cout<<"th fan has been started"<<endl;
     }
 }
-class cpu{
+class Cpu{
     void initialisation()
 {
     cout<<"cpu initialisaation has been started"<<endl;
 }
 }
-class memory{
+class Memory{
     public:
     void selftest(){
         cout<<"memory:self test has been passed"<<endl;
     }
 }
-class hardware{
+class Hardware{
     void spinup(){
         cout<<"harqjfgjbbvb vcbvbvhk"<<endl;
     }
 }
-class bios{
+class Bios{
     public:
-    void boot(cpu&cp,memory& mem)
+    void boot(Cpu&cpu,Memory& memory)
     {
         cout<<" bios:booting the cpu and memory"<<endl;
-        cp.initialisation();
-        mem.selftest();
+        cpu.initialisation();
+        memory.selftest();
         
     }
 }
-class operatingsystem{
+class Operatingsystem{
     public:
     void load(){
         cout<<"operating system:loading into memory"<<endl;
     }
 }
 
-class computefacade
+class Computefacade
 {
+    private:
+    Powersupply powersupply1; 
+    Coolingsyste coolingsystem;
+    Cpu cpu;
+    Memory memory;
+    Hardware hardware;
+    Bios bios;
+    Operatingsystem operatingsystem;
 
+
+public:
+ void Startcomputer()
+ {
+
+ }
 }
