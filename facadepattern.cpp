@@ -71,3 +71,10 @@ public:
       
  }
 }
+//client;
+int main()
+{
+ Computefacade computer;
+ computer.Startcomputer();
+ return 0;
+}
