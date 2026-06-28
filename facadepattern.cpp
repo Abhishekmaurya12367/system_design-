@@ -24,7 +24,7 @@ class Memory{
         cout<<"memory:self test has been passed"<<endl;
     }
 }
-class Hardware{
+class Hardrive{
     void spinup(){
         cout<<"harqjfgjbbvb vcbvbvhk"<<endl;
     }
@@ -49,11 +49,11 @@ class Operatingsystem{
 class Computefacade
 {
     private:
-    Powersupply powersupply1; 
+    Powersupply powersupply; 
     Coolingsyste coolingsystem;
     Cpu cpu;
     Memory memory;
-    Hardware hardware;
+    Hardrive hardrive;
     Bios bios;
     Operatingsystem operatingsystem;
 
@@ -61,6 +61,13 @@ class Computefacade
 public:
  void Startcomputer()
  {
-
+    powersupply.providepowe();
+    coolingsystem.startfan();
+    // cpu.initialisation();
+    bios.boot(cpu,memory);
+    hardrive.spinup();
+    operatingsystem.load();
+    cout<<"computet booted successfully"<<endl;
+      
  }
 }
