@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+class HTTPrequest{
+ private:
+    string url;
+    string methode;
+    map<int,string>headers;
+    map<int,string>queryparams;
+    string body;
+    int timeout;
+    // private constructor can be access by the only builder 
+    HTTPrequest(){}
+    friend class httpbuilder;
+
+    void execute(){
+  cout<<"it is printing the value that are stored in the defined variable"<<endl;
+    if(!queryparams.empty()){
+        for(auto &param:queryparams){
+            cout<<param.first<<""<<queryparam.second<<endl;
+        }
+    }
+cout<<"printing the headers that are mention in the header"<<endl;
+for(auto &hed:headers)
+{
+  cout<<hed.first<<""<<hed.second<<endl;
+}
+if(!body.empty()){
+    cout<<body<<endl;
+}
+    }
+
+class httpbuilder{
+    HTTPrequest req;
+    public:
+    httpbuilder& withUrl(const string &u)
+    {
+
+    }
+
+}
+
+}

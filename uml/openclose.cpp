@@ -58,6 +58,7 @@ class shopppingprinter{
         cout<<"total"<<cart->totalammout()<<endl;
     }
 }
+
 // this is voilasting theopenclose responsibility principal;
 // class shoppingstoradge{
 //     private:
@@ -77,7 +78,7 @@ class shopppingprinter{
 //     }
 
 
-//}
+// }
 class shoppingstoradge{vois
 private:
     shoppingcart*cart
@@ -111,5 +112,4 @@ int main()
     shoppingstoradge*storage=new shoppingstoradge(cart);
     cart->databasesave();
     return 0;
-
 }
