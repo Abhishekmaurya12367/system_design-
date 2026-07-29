@@ -80,7 +80,14 @@ class httpbuilder{
         // here i am checking the validation so that inconsistency problem does not happen;
     if(req.url.empty()){
         throw runtime_error("url can not be empty");
+
     }
+   // to safe from inconsistence now i am going to add some if else condition that i have already added above 
+   // if it does not satisfy throw error here not at runtime and we know that the error at the runtime is very  worst error;
+   if(req.methode.empty()){
+    throw runtime_error("methode can not be empty")
+    // similiarly we can add for each cases
+   }
     return req;
     }
     
