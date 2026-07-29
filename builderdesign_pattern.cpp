@@ -75,6 +75,14 @@ class httpbuilder{
         return *this;
 
     }
+    //build methode to create immutable httprequest object;
+    HTTPrequest build(){
+        // here i am checking the validation so that inconsistency problem does not happen;
+    if(req.url.empty()){
+        throw runtime_error("url can not be empty");
+    }
+    return req;
+    }
     
 
 }
