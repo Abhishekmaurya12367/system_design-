@@ -93,5 +93,13 @@ int main(){
     .withUrl("https://api.example.com")
     .withMethode("POST")
     .withHeaders("content-type","application/json")
+    .withHeaders("accept","application/json")
+    .withQueryParams("key","12334")
+    .withBody("{\"name\":\"aditya\"}")
+    .withTimeout(60)
+    .build()
+
+    request.execute()  // gurunteed to be consistence state;
+    
 
 }
