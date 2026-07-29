@@ -12,7 +12,7 @@ class HTTPrequest{
     HTTPrequest(){}
     friend class httpbuilder;
 
-    void execute(){
+void execute(){
   cout<<"it is printing the value that are stored in the defined variable"<<endl;
     if(!queryparams.empty()){
         for(auto &param:queryparams){
@@ -86,5 +86,12 @@ class httpbuilder{
     
 
 }
+
+};
+int main(){
+    HTTPrequest request=httpbuilder();
+    .withUrl("https://api.example.com")
+    .withMethode("POST")
+    .withHeaders("content-type","application/json")
 
 }
