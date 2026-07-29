@@ -34,6 +34,21 @@ class httpbuilder{
     public:
     httpbuilder& withUrl(const string &u)
     {
+        req.url=u;
+        return *this;
+
+    }
+     public:
+    httpbuilder& withMethode(string methode)
+    {
+        req.methode=methode;
+        return *this;
+
+    }
+      httpbuilder& withMethode(string methode)
+    {
+        req.methode=methode;
+        return *this;
 
     }
 
