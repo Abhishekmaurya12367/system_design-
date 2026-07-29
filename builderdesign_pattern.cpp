@@ -92,12 +92,15 @@ int main(){
     HTTPrequest request=httpbuilder();
     .withUrl("https://api.example.com")
     .withMethode("POST")
-    .withHeaders("content-type","application/json")
-    .withHeaders("accept","application/json")
-    .withQueryParams("key","12334")
+    // .withHeaders("content-type","application/json")
+    // .withHeaders("accept","application/json")
+    // .withQueryParams("key","12334")
     .withBody("{\"name\":\"aditya\"}")
     .withTimeout(60)
     .build()
+    // lets understand this things that if some parameter is not passed you can see that i have already commented it work fine but 
+    // but it will give error at runtime or compile time that was the problem of inconsistence to resplve this we can check code in the 
+    //build methode so that when any variable is empty  it throw error at here not at the compile or at runtime 
 
     request.execute()  // gurunteed to be consistence state;
     
