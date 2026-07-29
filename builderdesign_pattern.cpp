@@ -51,6 +51,31 @@ class httpbuilder{
         return *this;
 
     }
+      httpbuilder& withHeaders(int key,string &value)
+    {
+        req.header[key]=value;
+        return*this;
+        
+    }
+     httpbuilder& withQueryParams(int key,string &value)
+    {
+        req.queryparams[key]=value;
+        return*this;
+        
+    }
+    httpbuilder& withBody(string body)
+    {
+        req.body=body;
+        return *this;
+
+    }
+    httpbuilder& withTimeout(int timeout)
+    {
+        req.timeout=timeout;
+        return *this;
+
+    }
+    
 
 }
 
