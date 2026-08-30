@@ -49,4 +49,4 @@ class  Client{
     {
      cout<<"json data:"<<report->getJsonData(rawdata)<<endl; good
     }
-}
+}ji
